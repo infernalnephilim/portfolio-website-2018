@@ -1,0 +1,55 @@
+<script type="text/javascript" src="validation.js"></script>
+<div class="container padding-top-50 main-text-font">
+    <div class="row text-left vertical-align padding-top-50">
+        <div class="col-md-4 p">
+            <p><span class="oi oi-map-marker" title="icon name" aria-hidden="true"></span>  Kraków, Polska</p>
+            <p><span class="oi oi-phone" title="icon name" aria-hidden="true"></span>  +48 694 962 442</p>
+            <p><span class="oi oi-pencil" title="icon name" aria-hidden="true"></span>  aleksandra.poltorak.x@gmail.com</p>
+            <p><span class="oi oi-link-intact" title="icon name" aria-hidden="true"></span>  www.aleksandra-poltorak.pl</p>
+        </div>
+        <div class="col-md-8">
+            <form id="kontakt-form" class="needs-validation no-background">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3 margin-top-20">
+
+                        <input type="text" class="form-control" id="contact-name" placeholder="" required>
+                        <label for="contact-name" class="input_label">
+                            <span class="input_label_content"> Imię i nazwisko</span>
+                        </label>
+                        <div id="name-valid" class="invalid-tooltip">
+                            Wpisz poprawne imię i nazwisko
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 margin-top-20">
+
+                        <input type="text" class="form-control" id="contact-mail" placeholder=""
+                               aria-describedby="validationTooltipUsernamePrepend" required>
+                        <label for="contact-mail" class="input_label">
+                            <span class="input_label_content">Twój E-Mail</span>
+                        </label>
+                        <div id="topic-valid" class="invalid-tooltip">
+                            Podany adres E-Mail jest niepoprawny
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-row margin-top-20">
+                    <div class="col-md-12 mb-3">
+                        <textarea class="form-control" id="contact-text" rows="4" required></textarea>
+                        <label for="contact-text" class="input_label">
+                            <span class="input_label_content">Twoja wiadomość</span>
+                        </label>
+                        <div id="text-valid" class="invalid-tooltip">
+                            Wpisz treść wiadomości
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                <button id="submit" class="btn btn-primary" type="button">Wyślij wiadomość</button>
+                </div>
+            </form>
+            <div id="message-sent" class="message-success alert-success">Message</div>
+            <div id="message-sent-failed" class="message-fail alert-danger">Message</div>
+        </div>
+    </div>
+</div>

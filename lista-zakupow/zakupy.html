@@ -1,0 +1,47 @@
+<script src="lista-zakupow/angular.min.js"></script>
+<script src="lista-zakupow/app.js"></script>
+<script src="lista-zakupow/ctrl.js"></script>
+<div ng-app="myApp" name="myShoppingList" ng-controller="myCtrl" class="container shopping-list">
+    <div class="row list-title">
+        <div class="col-12">
+            <h2 class="text-uppercase text-center">{{appTitle}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-1 col-sm-0"></div>
+        <div class="col-lg-6 col-md-10 col-sm-12">
+            <ul class="sh-list">
+                <li ng-repeat="x in products">
+                    <div class="row">
+                        <div class="col-6">
+                            {{x.name}}
+                        </div>
+
+                        <div class="col-6 text-right">
+                            <button class="btn" ng-click="decreaseAmount($index)">-</button>
+                            <input class="am-style" type="number" placeholder="{{x.amount}}" min="1">
+                            <button class="btn" ng-click="increaseAmount($index)">+</button>
+                            <span class="remove-item text-right" ng-click="removeItem($index)">&times;</span>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+            <form class="add-form row">
+                <div class="col-8">
+                    <label>Produkt</label>
+                    <input class="input-light form-control" type="text" placeholder="Wpisz nazwę produktu" ng-model="addMe">
+                </div>
+                <div class="col-4">
+                    <label>Ilość</label>
+                    <input class="input-light form-control" type="number" min="1" ng-value="1" ng-model="addAm">
+                </div>
+                <div class="col-12">
+                    <button class="btn" type="submit" name="Dodaj" ng-click="addProduct()">Dodaj</button>
+                    <p class="alert-danger">{{errorText}}</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
