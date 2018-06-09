@@ -156,13 +156,18 @@
 
 <script>
     $(document).ready(function () {
-        $('.grid').masonry({
+
+        var $grid = $('.grid').masonry({
             // set itemSelector so .grid-sizer is not used in layout
             itemSelector: '.element-item',
             // use element for option
             columnWidth: '.grid-sizer',
             percentPosition: true
         });
+        $grid.imagesLoaded().progress(function () {
+            $grid.masonry('layout');
+        });
+
     });
 
 </script>

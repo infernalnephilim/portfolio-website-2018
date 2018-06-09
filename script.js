@@ -1,5 +1,10 @@
 'use strict';
 
+$(window).on('load', function(){
+    $(".loader").fadeOut();
+    $(".loader-wrapper").delay(350).fadeOut("slow");
+});
+
 $(function () {
     $("#s1-text").load("o-mnie.html", function (response, status, xhr) {
         if (status == "error") {
@@ -36,7 +41,7 @@ $(function () {
 
 $(window).bind('scroll', function () {
     navColorChange();
-    highlightNav();
+    // highlightNav();
     // var h = $("#grid").height();
     // $("#portfolio").css("min-height:", h);
 });
