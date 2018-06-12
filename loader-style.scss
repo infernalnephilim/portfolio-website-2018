@@ -1,0 +1,80 @@
+/***************************************
+    preloader
+****************************************/
+
+$color1: #ad81dc;
+$color2: #5824cc;
+$color3: #3e1acc;
+$color4: #282dcc;
+$color5: #024bcc;
+$color6: #416af9;
+
+
+.loader-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #fff;
+  z-index: 30000;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.dot-loader {
+  width: 20px;
+  height: 20px;
+  background: #eee;
+  display: inline-block;
+  border-radius: 50%;
+  animation: slide 2s infinite;
+}
+
+.loader .dot-loader:nth-child(1) {
+  animation-delay: 0.1s;
+  background: $color1;
+}
+
+.loader .dot-loader:nth-child(2) {
+  animation-delay: 0.2s;
+  background: $color2;
+}
+
+.loader .dot-loader:nth-child(3) {
+  animation-delay: 0.3s;
+  background: $color3;
+}
+
+.loader .dot-loader:nth-child(4) {
+  animation-delay: 0.4s;
+  background: $color4;
+}
+
+.loader .dot-loader:nth-child(5) {
+  animation-delay: 0.5s;
+  background: $color5;
+}
+
+.loader .dot-loader:nth-child(6) {
+  animation-delay: 0.6s;
+  background: $color6;
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: .3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
