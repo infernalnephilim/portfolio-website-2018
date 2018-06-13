@@ -1,6 +1,6 @@
 'use strict';
 
-$(window).on('load', function(){
+$(window).on('load', function () {
     $(".loader").fadeOut();
     $(".loader-wrapper").delay(350).fadeOut("slow");
 });
@@ -8,15 +8,40 @@ $(window).on('load', function(){
 $(function () {
     $("#s1-text").load("o-mnie.html", function (response, status, xhr) {
         if (status == "error") {
-            var msg = "Sorry but there was an error: ";
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
             $("#error").html(msg + xhr.status + " " + xhr.statusText);
         }
     });
-    $("#s2-text").load("umiejetnosci.html");
-    $("#s3-text").load("edukacja.html");
-    $("#s4-text").load("portfolio.html");
-    $("#s5-text").load("kontakt.html");
-    $("footer").load("footer.html");
+    $("#s2-text").load("umiejetnosci.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
+    $("#s3-text").load("edukacja.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
+    $("#s4-text").load("portfolio.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
+    $("#s5-text").load("kontakt.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
+    $("footer").load("footer.html", function (response, status, xhr) {
+        if (status == "error") {
+            var msg = "Wystąpił błąd podczas ładowania strony: ";
+            $("#error").html(msg + xhr.status + " " + xhr.statusText);
+        }
+    });
     $("#navbarNav .nav-item:nth-child(1)").addClass("active");
 });
 
@@ -57,4 +82,3 @@ function navColorChange() {
         $("#nav").removeClass("nav-change");
     }
 }
-
