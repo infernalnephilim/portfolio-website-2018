@@ -1,7 +1,11 @@
 @import "bootstrap-4.0.0-dist/css/bootstrap.min.css";
 
-* {
+$logo-font: 'Raleway', sans-serif;
+$h4-font: 'Montserrat', sans-serif;
+$content-font: 'Roboto', sans-serif;
 
+* {
+  font-family: $content-font;
 }
 
 html {
@@ -23,15 +27,17 @@ html, body {
 }
 
 h4 {
-  font-family: Raleway;
+  font-family: $h4-font;
   font-weight: bold;
 }
 
 a:hover {
   text-decoration: none;
 }
-
-h1.display-4:after {
+h2{
+  font-family: $content-font;
+}
+h2.display-4:after {
   content: '';
   display: block;
   margin: 10px auto 15px;
@@ -46,15 +52,14 @@ h1.display-4:after {
   -ms-transition: background-color 1s ease;
   -o-transition: background-color 1s ease;
   transition: background-color 1s ease;
+  .navbar-brand, .navbar-brand span {
+    font-family: $logo-font;
+
+  }
 }
 
 .nav-change {
   background: #000 !important;
-}
-
-.navbar-brand {
-  font-family: "Raleway";
-
 }
 
 #carousel {
@@ -460,7 +465,7 @@ form textarea:focus {
 }
 
 .card-title, .btn {
-  font-family: Raleway;
+  font-family: $content-font;
 }
 
 .btn-style {
@@ -491,7 +496,7 @@ form textarea:focus {
 }
 
 .main-text-font {
-  font-family: Raleway;
+  font-family: $content-font;
 }
 
 .about-me-text {
@@ -534,6 +539,12 @@ form textarea:focus {
 
 .skill {
   margin-top: 40px;
+  img{
+    max-width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .dot {
@@ -606,7 +617,7 @@ form textarea:focus {
 }
 
 .school {
-  font-family: Raleway;
+  font-family: $content-font;
   padding-left: 40px;
   padding-top: 20px;
   text-align: left;

@@ -1,4 +1,7 @@
 @import url(bootstrap-4.0.0-dist/css/bootstrap.min.css);
+* {
+  font-family: "Roboto", sans-serif; }
+
 html {
   font-size: 1em; }
 
@@ -14,13 +17,16 @@ html, body {
     padding-left: 0; }
 
 h4 {
-  font-family: Raleway;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold; }
 
 a:hover {
   text-decoration: none; }
 
-h1.display-4:after {
+h2 {
+  font-family: "Roboto", sans-serif; }
+
+h2.display-4:after {
   content: '';
   display: block;
   margin: 10px auto 15px;
@@ -34,12 +40,11 @@ h1.display-4:after {
   -ms-transition: background-color 1s ease;
   -o-transition: background-color 1s ease;
   transition: background-color 1s ease; }
+  #nav .navbar-brand, #nav .navbar-brand span {
+    font-family: "Raleway", sans-serif; }
 
 .nav-change {
   background: #000 !important; }
-
-.navbar-brand {
-  font-family: "Raleway"; }
 
 #carousel {
   background: #000; }
@@ -365,7 +370,7 @@ form textarea:focus {
   transform: translate(-50%, -50%); }
 
 .card-title, .btn {
-  font-family: Raleway; }
+  font-family: "Roboto", sans-serif; }
 
 .btn-style {
   padding: 10px;
@@ -390,7 +395,7 @@ form textarea:focus {
   align-items: center; }
 
 .main-text-font {
-  font-family: Raleway; }
+  font-family: "Roboto", sans-serif; }
 
 .about-me-text {
   text-align: justify;
@@ -425,6 +430,11 @@ form textarea:focus {
 
 .skill {
   margin-top: 40px; }
+  .skill img {
+    max-width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    margin-bottom: 10px; }
 
 .dot {
   width: 20px;
@@ -482,7 +492,7 @@ form textarea:focus {
   background-color: #5824cc; }
 
 .school {
-  font-family: Raleway;
+  font-family: "Roboto", sans-serif;
   padding-left: 40px;
   padding-top: 20px;
   text-align: left; }

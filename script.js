@@ -66,9 +66,13 @@ $(function () {
 
 $(window).bind('scroll', function () {
     navColorChange();
-    // highlightNav();
-    // var h = $("#grid").height();
-    // $("#portfolio").css("min-height:", h);
+    highlightNav();
+    $("#navbarNav .nav-item a").on("click", function () {
+        $("#navbarNav .nav-item a").removeClass("active");
+        $("#navbarNav .nav-item a").removeClass("active-link");
+        $(this).addClass("active");
+        // $(this).addClass("active-link");
+    });
 });
 
 function navColorChange() {
@@ -80,5 +84,26 @@ function navColorChange() {
         $("#nav").addClass("nav-change");
     } else {
         $("#nav").removeClass("nav-change");
+    }
+}
+function highlightNav() {
+    var top = $(window).scrollTop();
+    $("#navbarNav .nav-item *").removeClass("active");
+
+    if (top < $("#o-mnie").offset().top - 300) {
+        $("#navbarNav .nav-item").removeClass("active");
+        $("#navbarNav .nav-item:nth-child(1)").addClass("active");
+    } else if (top < $("#umiejetnosci").offset().top - 300) {
+        $("#navbarNav .nav-item").removeClass("active");
+        $("#navbarNav .nav-item:nth-child(2)").addClass("active");
+    } else if (top < $("#edukacja").offset().top - 300) {
+        $("#navbarNav .nav-item").removeClass("active");
+        $("#navbarNav .nav-item:nth-child(3)").addClass("active");
+    } else if (top < $("#portfolio").offset().top - 300) {
+        $("#navbarNav .nav-item").removeClass("active");
+        $("#navbarNav .nav-item:nth-child(4)").addClass("active");
+    } else if (top < $("#kontakt").offset().top - 300) {
+        $("#navbarNav .nav-item").removeClass("active");
+        $("#navbarNav .nav-item:nth-child(5)").addClass("active");
     }
 }
